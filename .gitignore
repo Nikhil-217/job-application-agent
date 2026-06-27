@@ -1,0 +1,25 @@
+# Credentials & Secrets (Highly Sensitive)
+.env
+service_account.json
+credentials.json
+token.json
+*.json.key
+
+# Python / Virtual Environment
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Local Data, PDFs, & Resumes
+resume.txt
+tailored_resumes/
+*.pdf
+*.log
+
+# Framework Caches & Databases
+.gradio/
+.adk/
+.pytest_cache/
+.ipynb_checkpoints/

@@ -1,0 +1,24 @@
+[0:00 — HOOK]
+Applying for jobs has become a full-time job of its own, with hours spent manually tailoring resumes, drafting custom cover letters, and maintaining spreadsheets. (pause) Today, I am excited to show you the Job Application Assistant, a personal AI concierge that cuts down this exhausting process from hours to just under two minutes.
+
+[0:20 — WHAT IT IS]
+This agent belongs to the Concierge Agents track of the Kaggle hackathon. It is designed to act as a highly secure, privacy-first personal assistant that handles the entire pipeline of job hunting — from parsing listings to resume version backups and real-time tracking — without risking your personal credentials or sensitive information.
+
+[0:40 — SHOW THE BANNER]
+(show assets/cover_page_banner.png) (pause)
+At a glance, the Job Application Assistant offers seamless ATS optimization, automatic Google Drive version backups, and real-time Google Sheets tracking, providing a unified, secure career workflow.
+
+[1:00 — ARCHITECTURE]
+(show assets/architecture_diagram.png) (pause)
+Let me walk you through the system architecture. First, any input pasted by the user enters the Security Checkpoint, where it is sanitized and validated. From there, the Orchestrator Agent manages the conversation flow and state transitions. It delegates to the Job Analysis Agent to parse requirements, which then feeds into the Resume Tailor Agent. The Resume Tailor Agent calls the local Resume MCP Server to read the original resume and rewrites key bullet points to match ATS keywords. Next, the Cover Letter Agent drafts a customized cover letter, and a Tracker Agent uses the Sheets MCP Server wrapper to log details. The final output is updated with versioned files and a Follow-Up Agent drafts email templates. All of this includes a built-in Human Approval pause to keep you in control at every single step.
+
+[2:00 — LIVE DEMO]
+(switch to playground at localhost:7860) (pause)
+Now, let's see it in action. In Tab 1, I paste a job description for a Senior Python Developer at AlphaTech. The Job Analyzer instantly extracts the company name, role title, application deadline, and a summary. Moving to Tab 2, I click Tailor Resume. The agent retrieves my base resume and rewrites the experience points. Behind the scenes, it generates a beautiful PDF and uploads it directly to my Google Drive under the version label 'Resume_v1'. In Tab 3, the Cover Letter Agent creates a customized draft that I can edit. Finally, in Tab 4, the Sheets Tracker tab shows the pre-filled columns. I click Log to Google Sheets, and the Tracker Agent logs the details directly to my live tracking spreadsheet, leaving me with a clean, updated pipeline.
+
+[3:00 — SECURITY & MCP]
+(pause)
+What makes this system unique is its security and integration design. The security checkpoint rate limits requests, sanitizes inputs, and redacts PII like phone numbers or Aadhaar cards before logging. Meanwhile, our custom Sheets MCP server wrapper redirects logging to stderr, preventing the protocol crashes common in standard implementations.
+
+[3:30 — IMPACT / CLOSE]
+This agent empowers job seekers by saving them hundreds of hours, organizing their applications automatically, and keeping their private data safe. Thank you for your time, and I am ready to take any questions!
