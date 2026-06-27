@@ -138,18 +138,8 @@ Ensure your credentials are not uploaded to GitHub. Double-check your ignored fi
 
 ---
 
-## 🖼️ Assets
 
-### Project Cover Banner
-![Job Application Assistant Cover Banner](assets/cover_page_banner.png)
+## 🎥 Video Walkthrough
 
-### Agent Workflow Diagram
-![Job Application Assistant Workflow Diagram](assets/architecture_diagram.png)
-
----
-
-## 🎤 Demo Script
-
-You can find the spoken presentation narration script for a 3-4 minute video walkthrough in [DEMO_SCRIPT.txt](DEMO_SCRIPT.txt).
-
+You can find the video walkthrough demo here: https://youtu.be/3edDoxGtHYY
 
